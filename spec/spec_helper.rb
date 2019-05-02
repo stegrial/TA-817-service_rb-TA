@@ -35,11 +35,11 @@ RSpec.configure do |config|
   p services
 
   Capybara.register_driver :true_automation_driver do |app|
-    TrueAutomation::Driver::Capybara.new(app, browser: :chrome, service: services)
+    TrueAutomation::Driver::Capybara.new(app, service: services)
   end
 
   # Capybara.register_driver :true_automation_driver do |app|
-  #   TrueAutomation::Driver::Capybara.new(app, browser: :firefox, service: services)
+  #   TrueAutomation::Driver::Capybara.new(app, service: services)
   # end
 
   Capybara.configure do |capybara|
